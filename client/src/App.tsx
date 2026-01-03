@@ -1,11 +1,25 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import Pricing from './pages/Pricing'
+import Projects from './pages/Projects'
+import MyProjects from './pages/MyProjects'
+import Preview from './pages/Preview'
+import Community from './pages/Community'
 
 const App = () => {
   return (
     <div>
       <Routes>
-        
+        <Route path='/' element={<Home />} />
+        <Route path='/pricing' element={<Pricing />} />
+        <Route path='/projects/:projectID' element={<Projects />} />
+        <Route path='/projects' element={<MyProjects />} />
+        <Route path='/preview/:projectID' element={<Preview />} />
+        <Route path='/preview/:projectID/:versionID' element={<Preview />} />
+        <Route path='/preview/:projectID/:versionID' element={<Preview />} />
+        <Route path='/community' element={<Community />} />
+
       </Routes>
     </div>
   )
