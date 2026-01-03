@@ -2,4 +2,11 @@
 
 *{
   font-family: "Outfit", sans-serif;
+  background: #000;
+}
+
+@layer base{
+  button {
+    @apply cursor-pointer;
+  }
 }
